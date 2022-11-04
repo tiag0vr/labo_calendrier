@@ -1,0 +1,9 @@
+# ninja log v5
+14	2769	6891955299689227	CMakeFiles/calendrier.dir/calendrier.cpp.obj	773f0ad53f1fbb0d
+8	1887	6891955359176191	CMakeFiles/calendrier.dir/main.cpp.obj	1dabb2f6417d3301
+7	1982	6891956016501448	CMakeFiles/calendrier.dir/tools.cpp.obj	8d7c8ed51d83359
+1982	2213	6891956018760681	calendrier.exe	2d4658c38cb11c2
+1	767	6891966383241329	build.ninja	e414ade32a45c108
+6	2369	6891966408531758	CMakeFiles/calendrier.dir/main.cpp.obj	1dabb2f6417d3301
+10	2375	6891966408601913	CMakeFiles/calendrier.dir/calendrier.cpp.obj	773f0ad53f1fbb0d
+2375	2588	6891966410620757	calendrier.exe	7bb645cf38c6647b
