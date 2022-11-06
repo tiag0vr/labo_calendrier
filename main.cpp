@@ -25,11 +25,6 @@
 
 #include "calendrier.h"
 
-//Revoir include
-//Boucle de vérification de l'entrée utilisateur pour oui/non
-//Ev Remarques à faire (tools,...)
-//Commentaires
-
 // Fonction de saisie utilisateur, recommence en cas de fausse entrée, retourne le contenu de la saisie
 int saisie (const string& msgInvite, const string& msgErreur, const int& min, const int& max);
 
@@ -99,8 +94,8 @@ int saisie (const string& msgInvite, const string& msgErreur, const int& min, co
 char saisieRecommencer(){
     char again;
     bool erreur;
-    string msgRecommencer = "Cette entree est incorrect, veuillez recommencer : [O/N]";
-    string msgEntree = "Voulez-vous recommencer ?";
+    const string msgRecommencer = "Cette entree est incorrect, veuillez recommencer : [O/N]";
+    const string msgEntree = "Voulez-vous recommencer ?";
 
     do{
         cout << msgEntree << endl;
