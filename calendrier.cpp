@@ -1,17 +1,13 @@
-//
-// Created by Tjorge on 01.11.2022.
-//
 #include "calendrier.h"
 
-
-bool estBissextile(int annee) {
+bool estBissextile(const int& annee) {
     if (annee % 400 == 0 || (annee % 4 == 0 && annee % 100 != 0)) {
         return true;
     }
     return false;
 }
 
-int nbJourMois(Mois mois, int annee) {
+int nbJourMois(const Mois& mois, const int& annee) {
 
     switch (mois)
     {
@@ -30,7 +26,8 @@ int nbJourMois(Mois mois, int annee) {
     }
 }
 
-string nomMois(Mois mois) {
+string nomMois(const Mois& mois) {
+
     switch (mois)
     {
         case Janvier:
@@ -63,7 +60,7 @@ string nomMois(Mois mois) {
     return "Error";
 }
 
-void affichage(int annee, int index) {
+void affichage(const int& annee, int index) {
     for (int i = 0; i < 12; ++i) {
         cout << nomMois((Mois)i) << " " << annee << endl;
         cout << " L  M  M  J  V  S  D" << endl;
@@ -71,7 +68,6 @@ void affichage(int annee, int index) {
             if (j == 1 && index != 0) {
                 cout << setw(index * 3) << " ";
             }
-
             cout << setw(2) << j << " ";
 
             ++index;
@@ -84,11 +80,11 @@ void affichage(int annee, int index) {
     }
 }
 
-int jourAnnee(int annee, int index){
+int premierJourAnnee(const int& annee, int index, const int& ANNEE_MIN){
     //index pour l'an 1800 => mercredi
     index = 2;
 
-    for (int i = 1800; i < annee; ++i) {
+    for (int i = ANNEE_MIN; i < annee; ++i) {
 
         if (estBissextile(i)) {
             index += 2;
@@ -97,7 +93,6 @@ int jourAnnee(int annee, int index){
             ++index;
         }
     }
-
     index %= 7;
 
     return index;
